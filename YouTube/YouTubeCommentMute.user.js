@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTubeCommentMute
 // @namespace    https://github.com/watanabe1115/GreasemonkeyScripts/
-// @version      1.0.0
+// @version      1.0.1
 // @description  youtubeのコメントをミュートする
 // @author       watanabe1115
 // @match        https://www.youtube.com/watch*
@@ -191,5 +191,5 @@ false);
 	'use strict';
 
 	// Your code here...
-	blockChannelList = JSON.parse(GM_getValue(BLOCK_CHANNEL_LIST));
+	blockChannelList = JSON.parse(GM_getValue(BLOCK_CHANNEL_LIST, []));
 })();
