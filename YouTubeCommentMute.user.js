@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         YouTubeCommentMute
 // @namespace    https://github.com/watanabe1115/GreasemonkeyScripts/
-// @version      1.0.2
+// @version      1.0.3
 // @description  youtubeのコメントをミュートする
 // @author       watanabe1115
 // @match        https://www.youtube.com/watch*
@@ -135,10 +135,11 @@ function deleteMuteButtonElement(node) {
 }
 
 
-/**
- * Onloadで処理する
- */
-window.addEventListener('load', (function(){
+(function() {
+	'use strict';
+
+	// Your code here...
+	blockChannelList = JSON.parse(GM_getValue(BLOCK_CHANNEL_LIST, "[]"));
 
 	// コメントを監視
 	var commentObserver = new MutationObserver(function(mutations) {
@@ -183,13 +184,5 @@ window.addEventListener('load', (function(){
 			}
 		}
 	}, 1000);
-})(),
-false);
 
-
-(function() {
-	'use strict';
-
-	// Your code here...
-	blockChannelList = JSON.parse(GM_getValue(BLOCK_CHANNEL_LIST, "[]"));
 })();
