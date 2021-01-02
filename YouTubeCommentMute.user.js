@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         YouTubeCommentMute
-// @namespace    https://github.com/watanabe1115/GreasemonkeyScripts/
+// @namespace    https://github.com/watanabe1115/gm.YouTubeCommentMute
 // @version      1.0.3
 // @description  youtubeのコメントをミュートする
 // @author       watanabe1115
